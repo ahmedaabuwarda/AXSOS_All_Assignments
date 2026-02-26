@@ -1,0 +1,12 @@
+START
+    INPUT number
+    IF number < 0 THEN
+        PRINT "Invalid number!"
+    ELSE
+        fa = 1
+        FOR i = 1 to number
+            fa = fa * i
+        END FOR
+        PRINT "The factorial result is: " + fa
+    END IF
+END

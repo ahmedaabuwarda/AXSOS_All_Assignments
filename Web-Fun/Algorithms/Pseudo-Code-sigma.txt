@@ -3,10 +3,10 @@ START
     IF number < 0 THEN
         PRINT "Invalid number!"
     ELSE
-        fa = 1
+        sum = 0
         FOR i = 1 to number
-            fa = fa * i
+            sum = sum + i
         END FOR
-        PRINT fa
+        PRINT "The total sum from 1 to " + number + " is: " + sum
     END IF
 END
