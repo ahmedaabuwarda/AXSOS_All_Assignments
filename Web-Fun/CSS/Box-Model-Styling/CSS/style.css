@@ -1,0 +1,25 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    background-color: black;
+    color:white;
+    padding: 10px;
+}
+h1 span {
+    color: aqua;
+}
+h2 {
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    padding: 10px;
+}
+h3 {
+    background-color: cornflowerblue;
+    color:  rgb(48, 48, 91);
+    text-decoration: underline;
+    text-align: end;
+    padding: 10px;
+}
