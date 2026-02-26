@@ -1,0 +1,8 @@
+START
+    Input Number1
+    Inupt Number2
+    Inupt Number3
+    Set sum = Number1 + Number2 + Number3
+    Set avg = sum / 3
+    PRINT "The average is: " + avg
+END

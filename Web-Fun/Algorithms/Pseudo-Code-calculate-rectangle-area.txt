@@ -1,0 +1,6 @@
+START
+    Input Length
+    Inupt Width
+    Set area = Length * Width
+    PRINT "The area is: " + area
+END
