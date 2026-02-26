@@ -3,9 +3,9 @@ START
     IF number < 0 THEN
         PRINT "Invalid number!"
     ELSE
-        sum = 0
+        set sum to 0
         FOR i = 1 to number
-            sum = sum + i
+            Set sum to sum + i
         END FOR
         PRINT "The total sum from 1 to " + number + " is: " + sum
     END IF

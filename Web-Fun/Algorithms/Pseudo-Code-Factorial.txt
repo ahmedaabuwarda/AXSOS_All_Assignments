@@ -3,9 +3,9 @@ START
     IF number < 0 THEN
         PRINT "Invalid number!"
     ELSE
-        fa = 1
+        Set fa to 1
         FOR i = 1 to number
-            fa = fa * i
+            Set fa to fa * i
         END FOR
         PRINT "The factorial result is: " + fa
     END IF
