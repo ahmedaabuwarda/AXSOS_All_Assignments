@@ -4,12 +4,12 @@ body {
 button {
     display: block;
     margin-bottom: 10px;
+    font-size: large;
 }
 .btn-search {
     border-radius: 20px;
     padding: 8px 50px;
     color: #00d1b2;
-    font-size: large;
     font-weight: bold;
     border: 2px solid #00d1b2;
 }
@@ -20,13 +20,11 @@ button {
     border: none;
     color: white;
     background-color: #00d1b2;
-    font-size: large;
     font-weight: bold;
 }
 .btn-create-account {
     color: white;
     background-color: #3b82f6;
     padding: 15px 30px;
-    font-size: large;
     box-shadow: 5px 5px 0px 0px black;
 }
