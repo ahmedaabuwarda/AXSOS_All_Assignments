@@ -1,4 +1,4 @@
-// JS Assignments
+// JS Assignments Practice-1
 // Name: Ahmed Abuwarda, Date: 03/03/2026
 
 // 1
