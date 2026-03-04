@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: silver;
+}
+.container h1 {
+    text-align: center;
+    color: #2e3335;
+}
+.row1 {
+    background-color: #4bbef4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+}
+.row2 {
+    background-color: #da8bc2;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+}
+.row3 {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly; /* you can choose space-evenly or space-between*/
+    margin: 20px;
+    padding: 20px;
+}
+img.octocat {
+    height: 200px;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+}
