@@ -9,6 +9,7 @@ body {
 .row1 {
     background-color: #4bbef4;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin: 20px;
@@ -24,6 +25,7 @@ body {
 .row3 {
     background-color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly; /* you can choose space-evenly or space-between*/
     margin: 20px;
     padding: 20px;
