@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.row {
+    display: flex;
+    gap: 15px;
+}
+.row div {
+    background-color: #57a1a2;
+    color: white;
+    margin-top: 20px;
+}
+.col {
+    flex: 1;
+    padding: 20px;
+}
+.col-2 {
+    flex: 2;
+    padding: 20px;
+}
+.col-3 {
+    flex: 3;
+    padding: 20px;
+}
