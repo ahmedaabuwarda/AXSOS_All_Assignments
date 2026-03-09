@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav {
+    width: 100%;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+}
+.nav .nav-links {
+    display: flex;
+    align-items: center; /* center the items vertically */
+    list-style: none; /* remove dots */
+    padding: 15px 0px;
+}
+.nav .nav-links li {
+    margin: 0 15px; /* space between list items */
+}
+.nav .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav .nav-links li a:hover {
+    color: #00a2bb; /* or #ffcc00*/
+}
+.nav .nav-links li a.active {
+    color: #00a2bb; /* or #ffcc00*/
+}
+.btn {
+    background-color: #00a2bb; /* or #ffcc00*/
+    color: white; /* or #333333 */
+    border: 3px solid black;
+    box-shadow: 5px 5px 0px 0px black;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    /* justify-content: center; */
+    /* padding-top: 50px; */
+}
+.user-card {
+    width: 700px;
+    border: 2px solid silver;
+}
+.user-card .user-background {
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+}
+.user-content {
+    padding: 20px;
+    /* position: relative; */
+    /* top: -70px; */
+    /* left: 0; */
+}
+.user-card .avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid silver;
+    margin-top: -70px;
+    /* margin-left: 20px; */
+    /* position: absolute; */
+    /* top: 50px; */
+    /* left: 20px; */
+}
+.user-card img {
+    height: 15px;
+    margin-right: 10px;
+}
+.user-card h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.user-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
