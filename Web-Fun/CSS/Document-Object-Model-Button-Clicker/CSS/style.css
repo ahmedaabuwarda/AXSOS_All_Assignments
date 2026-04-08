@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1230px;
+    padding: 0 20px
+}
+
+.container > nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 15px 0;
+}
+
+.navbar search input{
+    height: 35px;
+    width: 300px;
+    padding: 0 10px;
+}
+
+.navbar h2 {
+    margin-left: 15px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+.right-side {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    height: fit-content;
+}
+
+.right-side > section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+}
+
+.left-side > section {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+}
+
+.left-side > section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section {
+    border: solid 2px black;
+    padding: 15px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+button {
+    height: 35px;
+    width: 100px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.login-btn {
+    background-color: #2C76E4;
+    color: white;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.definition-btn {
+    background-color: #92C47D;
+}
+
+.like-btn {
+    background-color: #FED966;
+}
