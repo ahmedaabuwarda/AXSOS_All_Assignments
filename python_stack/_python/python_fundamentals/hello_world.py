@@ -18,3 +18,8 @@ print(game.title()) # capitalizes the first letter of each word
 print(game.split())
 
 # print(game.join(""))
+
+def greet(name):
+    print(f"Hello {name}!")
+
+greet("dd")
