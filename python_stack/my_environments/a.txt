@@ -1,0 +1,79 @@
+>$ source _practice_pip_and_virtualenv/bin/activate
+(_practice_pip_and_virtualenv) >$ pip list
+Package Version
+------- -------
+pip     24.0
+
+>$ deactivate
+exited the virtual env 
+
+>$ pip3 list
+Package                 Version
+----------------------- ---------------
+absl-py                 2.1.0
+argcomplete             3.1.4
+astunparse              1.6.3
+
+The results are not the same! casue each env has its own libraries
+
+>$ source _practice_pip_and_virtualenv/bin/activate
+
+>$ pip install Django==2.2.4 (What information do you see returned in terminal after this command?)
+
+Downloading Django-2.2.4-py3-none-any.whl (7.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 92.5 kB/s eta 0:00:00
+Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 510.5/510.5 kB 50.0 kB/s eta 0:00:00
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.1/46.1 kB 25.6 kB/s eta 0:00:00
+Installing collected packages: pytz, sqlparse, Django
+Successfully installed Django-2.2.4 pytz-2026.1.post1 sqlparse-0.5.5
+
+>$ pip freeze (What's the difference between freeze and list?)
+
+Django==2.2.4
+pytz==2026.1.post1
+sqlparse==0.5.5
+
+Package  Version
+-------- ------------
+Django   2.2.4
+pip      24.0
+pytz     2026.1.post1
+sqlparse 0.5.5
+
+ANSWER:
+pip freeze prints packages in a name==version format suitable for a requirements.txt file. It is meant for capturing an exact environment state so you can recreate it later. That’s why pip freeze is often used together with output redirection like pip freeze > requirements.txt.
+
+pip list is more for human inspection. By default it displays packages in a table with columns like Package and Version. It is easier to read when you just want to check what is installed.
+
+
+First cd into your Desktop directory (cd ~/Desktop), then run this command: pip freeze > requirements.txt. What do you see when you ls? What's inside this file?
+
+I see list of files:
+
+Gift declaration.pdf'
+products.sql
+requirements.txt
+rgs_plan_ar_semester.pdf
+
+inside the file (cat requirements.txt)
+
+Django==2.2.4
+pytz==2026.1.post1
+sqlparse==0.5.5
+
+>$ pip uninstall Django
+
+Found existing installation: Django 2.2.4
+Uninstalling Django-2.2.4:
+  Would remove:
+    /media/...
+    /media/...
+    ....
+Proceed (Y/n)? y
+  Successfully uninstalled Django-2.2.4
+
+>$ pip show Django
+
+WARNING: Package(s) not found: Django
