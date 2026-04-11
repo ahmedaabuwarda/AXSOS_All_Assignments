@@ -29,3 +29,13 @@ mult = 3
 for i in range(lowNum, highNum + 1):
     if (i % mult == 0):
         print(i)
+
+def n(n=1):
+    print(n)
+
+def n(n=1,m=1):
+    print(n,m)
+
+
+n(n=5)
+n(n=5, m=10)
