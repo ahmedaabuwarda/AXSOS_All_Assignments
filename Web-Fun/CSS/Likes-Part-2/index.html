@@ -1,20 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
     <script defer src="./JS/script.js"></script>
     <title>Likes</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header class="nav">
+      <h2>Network</h2>
+    </header>
+    <h2>Your Feed</h2>
     <main>
-        <section>
-
+      <section class="left-side">
+        <img src="./assets/user_avatar.avif" alt="user avatar" />
+        <a href="#">Add an avatar</a>
+        <h2>James Doe</h2>
+      </section>
+      <div class="right-side-container">
+        <section class="right-side">
+          <div>
+            <h2>Neil M</h2>
+            <p>9 like(s)</p>
+            <button class="like-btn" onclick="counter(this)">Like</button>
+          </div>
+          <p>This is some filter text, it can say anything we like.</p>
         </section>
-        <section>
-            
+        <section class="right-side">
+          <div>
+            <h2>Nichole K</h2>
+            <p>12 like(s)</p>
+            <button class="like-btn" onclick="counter(this)">Like</button>
+          </div>
+          <p>Just finished my <a href="#">first comic</a>, check it out.</p>
         </section>
+        <section class="right-side">
+          <div>
+            <h2>Jim R</h2>
+            <p>3 like(s)</p>
+            <button class="like-btn" onclick="counter(this)">Like</button>
+          </div>
+          <p>I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
+        </section>
+      </div>
     </main>
-</body>
+  </body>
 </html>
