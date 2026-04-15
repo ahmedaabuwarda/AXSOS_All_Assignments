@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    background-color: #9FC5F8;
+    color: white;
+    padding: 15px;
+}
+
+header > nav {
+    display: flex;
+    align-items: center;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;    
+    gap: 25px;
+}
+
+header > nav > ul > li > a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* max-width: 1000px; */
+}
+
+.weather-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 2px solid black;
+}
+
+.weather-header-dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEEEE;
+    padding: 15px;
+    gap: 15px;
+    border-radius: 6px;
+    width: 210px;
+}
+
+.card img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.temp {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.temp-high {
+    color: red;
+    font-size: large;
+    font-weight: bold;
+}
+
+.temp-low {
+    color: blue;
+    font-size: large;
+    font-weight: bold;
+}
+
+.cookie {
+    position: fixed;
+    bottom: 5px;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 15px;
+    background-color: #EEEEEE;
+    border: 2px solid black;
+    max-width: 1000px;
+    align-self: center;
+}
+
+.cookie > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cookie > button {
+    width: 140px;
+    height: fit-content;
+    padding: 10px;
+    background-color: #9FC5F8;
+    box-shadow: 5px 5px 0px 0px black;
+    cursor: pointer;
+}
+

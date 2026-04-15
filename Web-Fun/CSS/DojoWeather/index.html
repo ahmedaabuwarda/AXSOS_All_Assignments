@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script defer src="./JS/script.js"></script>
+    <title>Dojo Weather</title>
+  </head>
+  <body>
+    <header>
+      <h1>DojoWeather</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="handleNav(this)">Burbank</a></li>
+          <li><a href="#" onclick="handleNav(this)">chicago</a></li>
+          <li><a href="#" onclick="handleNav(this)">Dallas</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="weather-header">
+        <h2>San Jose</h2>
+        <div class="weather-header-dropdown">
+          <p>show temperature in</p>
+          <select
+            name="temperature"
+            id="temperature"
+            onchange="handleTemp(this)"
+          >
+            <option value="c">C°</option>
+            <option value="f">F°</option>
+          </select>
+        </div>
+      </div>
+      <div class="weather-cards">
+        <div class="card">
+          <h3>Today</h3>
+          <img src="./assets/some_rain.png" alt="rain" />
+          <p>some rain</p>
+          <div class="temp">
+            <p class="temp-high">24</p>
+            <p class="temp-low">18</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Today</h3>
+          <img src="./assets/some_sun.png" alt="rain" />
+          <p>some rain</p>
+          <div class="temp">
+            <p class="temp-high">27</p>
+            <p class="temp-low">19</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Today</h3>
+          <img src="./assets/some_clouds.png" alt="rain" />
+          <p>some rain</p>
+          <div class="temp">
+            <p class="temp-high">21</p>
+            <p class="temp-low">16</p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Today</h3>
+          <img src="./assets/some_sun.png" alt="rain" />
+          <p>some rain</p>
+          <div class="temp">
+            <p class="temp-high">26</p>
+            <p class="temp-low">21</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <notification class="cookie">
+      <img src="./assets/cookie.png" alt="cookie" />
+      <div>
+        <h2>Stop! Cookie time</h2>
+        <p>
+          We use cookies (sadly not the edible onces) to personalize content and
+          ads, to provide social media features and to analyse our traffic.
+          <a href="#">Read more...</a>
+        </p>
+      </div>
+      <button class="accept-btn" onclick="handleDismiss(this)">I Accept</button>
+    </notification>
+  </body>
+</html>
