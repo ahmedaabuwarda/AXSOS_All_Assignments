@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script defer src="./JS/script.js"></script>
+    <title>Axsos Academy</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo-section">
+          <img src="./images/logo.png" alt="almeer logo car" />
+          <div class="logo-content">
+            <h3>Al AMeer</h3>
+            <p>we care your <span>car</span></p>
+          </div>
+        </div>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><button class="sign-in-btn">Sign in</button></li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <div class="carusel">
+          <div class="carusel-content">
+            <h1>Best Car services in the town</h1>
+            <button onclick="handleShowMoreBtn(this)" class="show-more-btn">
+              Show more
+            </button>
+          </div>
+          <div class="carusel-img">
+            <img
+              onclick="changeCaruselImg(this)"
+              src="./images/bluecar.png"
+              alt="bluecar"
+            />
+          </div>
+        </div>
+
+        <div class="services-section">
+          <div>
+            <h2>Our Services</h2>
+          </div>
+          <div class="services-cards">
+            <div class="card-layout">
+              <div class="card">
+                <img src="./icons/InteriorWashing.png" alt="InteriorWashing" />
+                <div>
+                  <p>Interior Washing</p>
+                  <button onclick="handleServicesBtn(this)">Book Now</button>
+                </div>
+              </div>
+              <p class="appointment-counter">
+                <span>3</span> Appointment Available
+              </p>
+            </div>
+
+            <div class="card-layout">
+              <div class="card">
+                <img src="./icons/SeatsWashing.png" alt="SeatsWashing" />
+                <div>
+                  <p>Seats Washing</p>
+                  <button onclick="handleServicesBtn(this)">Book Now</button>
+                </div>
+              </div>
+              <p class="appointment-counter">
+                <span>3</span> Appointment Available
+              </p>
+            </div>
+
+            <div class="card-layout">
+              <div class="card">
+                <img src="./icons/OilChanging.png" alt="OilChanging" />
+                <div>
+                  <p>Oil Changing</p>
+                  <button onclick="handleServicesBtn(this)">Book Now</button>
+                </div>
+              </div>
+              <p class="appointment-counter">
+                <span>3</span> Appointment Available
+              </p>
+            </div>
+
+            <div class="card-layout">
+              <div class="card">
+                <img src="./icons/VacuumCleaning.png" alt="Vacuum Cleaning" />
+                <div>
+                  <p>Vacuum Cleaning</p>
+                  <button onclick="handleServicesBtn(this)">Book Now</button>
+                </div>
+              </div>
+              <p class="appointment-counter">
+                <span>3</span> Appointment Available
+              </p>
+            </div>
+
+            <div class="card-layout">
+              <div class="card">
+                <img src="./icons/ExteriorWashing.png" alt="Exterior Washing" />
+                <div>
+                  <p>Exterior Washing</p>
+                  <button onclick="handleServicesBtn(this)">Book Now</button>
+                </div>
+              </div>
+              <p class="appointment-counter">
+                <span>3</span> Appointment Available
+              </p>
+            </div>
+
+            <div class="card-layout">
+              <div class="card">
+                <img src="./icons/BrakeReparing.png" alt="Brake Reparing" />
+                <div>
+                  <p>Brake Reparing</p>
+                  <button onclick="handleServicesBtn(this)">Book Now</button>
+                </div>
+              </div>
+              <p class="appointment-counter">
+                <span>3</span> Appointment Available
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-section">
+          <div>
+            <h2>What our clients say</h2>
+          </div>
+          <div class="reviews-content">
+            <img src="./images/unstisfied.png" alt="unstisfied" />
+            <div>
+              <p>
+                My experience at the car wash was disappointing. The cleaning
+                was superficial, and some spots remaind on the car even after
+                the wash. The staff were not friendly and seemed uninterested in
+                provideing good service. Additionally, the prices were high
+                compared to the quality of service I recieved. I did't think I
+                will be coming back or recommending this car wash to others.
+              </p>
+              <div class="read-more-btn-div">
+                <button onclick="handleReadMoreReview(this)">Read more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; Axsos Academy</p>
+      <ul>
+        <li>
+          <a href="#"><img src="https://img.icons8.com/?size=100&id=16712&format=png&color=2a77e3" alt="whatsapp" /></a>
+        </li>
+        <li>
+          <a href=""><img src="https://img.icons8.com/?size=100&id=8808&format=png&color=2a77e3" alt="linkedin" /></a>
+        </li>
+        <li>
+          <a href=""><img src="https://img.icons8.com/?size=100&id=2PW53odKlOCV&format=png&color=2a77e3" alt="email" /></a>
+        </li>
+        <li>
+          <a href=""><img src="https://img.icons8.com/?size=100&id=32292&format=png&color=2a77e3" alt="instagram" /></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
