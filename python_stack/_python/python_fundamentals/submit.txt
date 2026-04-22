@@ -1,1 +1,1 @@
-https://github.com/ahmedaabuwarda/AXSOS_All_Assignments/python_stack/_python/python_fundamentals
+https://github.com/ahmedaabuwarda/AXSOS_All_Assignments/tree/master/python_stack/_python/python_fundamentals

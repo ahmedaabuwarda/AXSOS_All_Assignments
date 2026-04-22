@@ -159,6 +159,7 @@ h2 {
   background-color: #94bbf1;
   padding: 10px 30px;
   gap: 30px;
+  border: 2px solid black;
 }
 
 @media (width < 780px) {
