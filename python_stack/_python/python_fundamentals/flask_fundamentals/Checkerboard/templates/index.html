@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='CSS/style.css') }}"
+    />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='JS/script.js') }}"
+    ></script>
+    <title>Checkerboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="chess" style="width: {{x*100}}px; height: {{y*100}}px;">
+        {% for iy in range(y) %} {% for jx in range(x) %} {% if ((iy % 2 == 0
+        and jx % 2 == 0) or (iy % 2 != 0 and jx % 2 != 0)) %}
+        <div class="square" style="background-color: {{ color1 }}"></div>
+        {% else %}
+        <div class="square" style="background-color: {{ color2 }}"></div>
+        {% endif %} {% endfor %} {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
