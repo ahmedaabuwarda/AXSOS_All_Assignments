@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+table {
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+table > thead {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+table > tbody > tr td,
+table > thead > tr td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table > tbody > tr:nth-child(even) {
+  background-color: #eee;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

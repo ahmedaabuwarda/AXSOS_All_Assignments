@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/CSS/style.css') }}"
+    />
+    <script
+      type="text/javascript"
+      src="{{url_for('static', filename='/JS/script.js')}}"
+    ></script>
+    <title>HTML Table</title>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Full Name</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td>{{ user["first_name"] }}</td>
+            <td>{{ user["last_name"] }}</td>
+            <td>{{ user["first_name"] }} {{ user["last_name"] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
