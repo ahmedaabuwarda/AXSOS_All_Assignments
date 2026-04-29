@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/CSS/style.css') }}"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="{{ url_for('static', filename='/JS/script.js') }}"
+    ></script>
+    <title>Index</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="/handle_form" method="POST" class="form">
+        <div class="row">
+          <label for="name">Your name: </label>
+          <input type="text" name="name" id="name" autofocus required />
+        </div>
+
+        <div class="row">
+          <label for="location">Dojo Location: </label>
+          <select name="location" id="location" required>
+            <option value="San Jonse" selected>San Jonse</option>
+            <option value="New Yourk">New Yourk</option>
+            <option value="Gaza">Gaza</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label for="language">Favorite Language: </label>
+          <select name="language" id="language" required>
+            <option value="Python" selected>Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Rust">Rust</option>
+          </select>
+        </div>
+
+        <div class="row gender">
+          <div>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" id="male" value="Male" />
+            <label for="male">male </label>
+            <input type="radio" name="gender" id="female" value="Female" />
+            <label for="female">Female </label>
+          </div>
+          <div></div>
+        </div>
+
+        <div class="column">
+          <label for="comment">Comment (Optional): </label>
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Type..."
+          ></textarea>
+        </div>
+
+        <div>
+          <input type="checkbox" name="terms" id="terms" required />
+          <label for="terms"
+            >By clicking here you agree on Terms of usage</label
+          >
+        </div>
+
+        <div class="row">
+          <button class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/CSS/result.css') }}"
+    />
+    <title>Result</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h2>Submitted Info</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Name:</td>
+              <td>{{ session.name }}</td>
+            </tr>
+            <tr>
+              <td>Dojo Location:</td>
+              <td>{{ session.location }}</td>
+            </tr>
+            <tr>
+              <td>Favorite Language:</td>
+              <td>{{ session.language }}</td>
+            </tr>
+            <tr>
+              <td>Gender:</td>
+              <td>{{ session.gender }}</td>
+            </tr>
+            <tr>
+              <td>comment:</td>
+              <td>{{ session.comment }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="/"><button class="goback-btn">Go Back</button></a>
+    </div>
+  </body>
+</html>
