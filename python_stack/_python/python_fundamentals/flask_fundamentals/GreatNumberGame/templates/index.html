@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/CSS/style.css') }}"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="{{ url_for('static', filename='/JS/script.js') }}"
+    ></script>
+    <title>Great Number Game</title>
+  </head>
+  <body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100.</p>
+    <p>Take a guess!</p>
+    {% if result %}
+    <div class="result" style="background-color: {{ color }};">
+      <h2>{{result}}</h2>
+    </div>
+    {% endif %}
+    <form action="/guess" method="post">
+      <input
+        type="number"
+        name="number"
+        id="number"
+        required
+        autofocus
+        step="1"
+        min="1"
+        max="100"
+      />
+      <button type="submit" class="btn">Guess!</button>
+    </form>
+    <a href="/again"><button class="btn">Play Again!</button></a>
+  </body>
+</html>
