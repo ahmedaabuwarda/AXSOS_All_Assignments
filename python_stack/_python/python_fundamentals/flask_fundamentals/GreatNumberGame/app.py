@@ -24,7 +24,7 @@ def guess():
     elif (random_number < number):
         result = "Too high!"
     else:
-        result = "Good job!"
+        result = str(random_number) + " was the number!"
         color = "green"
     
     return render_template('index.html', result=result, color=color)
