@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/CSS/style.css') }}"
+    />
+    <script
+      defer
+      type="text/javascript"
+      src="{{ url_for('static', filename='/JS/script.js') }}"
+    ></script>
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <p>{{visit_counter}} times visited</p>
+    <p>{{increment_counter}} times incremented</p>
+    <form action="/increment" method="POST">
+      <input type="number" name="increment" value="1" step="1" />
+      <button class="btn">increment</button>
+    </form>
+    <a href="/increment2"><button class="btn">+2</button></a>
+    <a href="/destroy_session"><button class="btn">Reset</button></a>
+  </body>
+</html>
