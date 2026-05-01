@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container > .gold-vault-div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.container > .gold-vault-div > p {
+  width: 180px;
+  height: 20px;
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  flex: 1 1 200px;
+  gap: 30px;
+}
+
+.btn {
+  width: 110px;
+  height: 30px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0px 0px black;
+  cursor: pointer;
+  font-size: large;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid black;
+  height: 200px;
+  overflow: scroll;
+  padding: 15px;
+}
+
+.output > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-decoration: none;
+  list-style: none;
+}

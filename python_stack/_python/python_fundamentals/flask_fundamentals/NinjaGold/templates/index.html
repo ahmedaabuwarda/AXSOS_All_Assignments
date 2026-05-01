@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='/CSS/style.css') }}"
+    />
+    <title>Ninja Gold</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gold-vault-div">
+        <h2>Your Gold</h2>
+        <p>{{ gold }}</p>
+        {% if gold >= 500 %}
+        <a href="/reset"><button class="btn">Reset</button></a>
+        <h2 style="color: green">You Win!</h2>
+        {% endif %}
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h2>Farm</h2>
+          <p>(earns 10-20 golds)</p>
+          <form action="/process_money" method="POST">
+            <input type="hidden" name="building" value="farm" />
+            <button class="btn" type="submit">Find Gold!</button>
+          </form>
+        </div>
+        <div class="card">
+          <h2>Cave</h2>
+          <p>(earns 5-10 golds)</p>
+          <form action="/process_money" method="POST">
+            <input type="hidden" name="building" value="cave" />
+            <button class="btn" type="submit">Find Gold!</button>
+          </form>
+        </div>
+        <div class="card">
+          <h2>House</h2>
+          <p>(earns 2-5 golds)</p>
+          <form action="/process_money" method="POST">
+            <input type="hidden" name="building" value="house" />
+            <button class="btn" type="submit">Find Gold!</button>
+          </form>
+        </div>
+        <div class="card">
+          <h2>Casino</h2>
+          <p>(earns/takes 0-50 golds)</p>
+          <form action="/process_money" method="POST">
+            <input type="hidden" name="building" value="casino" />
+            <button class="btn" type="submit">Find Gold!</button>
+          </form>
+        </div>
+      </div>
+      <div class="activities">
+        <p>Activities:</p>
+        <div class="output">
+          <ul>
+            {% for i in range(len-1, -1, -1) %} {{ activities[i]|safe }} {%
+            endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
