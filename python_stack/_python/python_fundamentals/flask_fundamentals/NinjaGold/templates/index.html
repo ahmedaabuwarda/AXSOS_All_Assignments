@@ -17,8 +17,9 @@
         <p>{{ gold }}</p>
         {% if gold >= 500 %}
         <a href="/reset"><button class="btn">Reset</button></a>
+        {% if gold >= 500 and len < 15 %}
         <h2 style="color: green">You Win!</h2>
-        {% endif %}
+        {% endif %} {% endif %}
       </div>
       <div class="cards">
         <div class="card">
