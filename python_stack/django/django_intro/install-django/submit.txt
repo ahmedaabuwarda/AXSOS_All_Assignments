@@ -1,1 +1,1 @@
-https://github.com/ahmedaabuwarda/AXSOS_All_Assignments/tree/master/python_stack/django/django_intro/First-Django-Project/install-django
+https://github.com/ahmedaabuwarda/AXSOS_All_Assignments/tree/master/python_stack/django/django_intro/install-django
