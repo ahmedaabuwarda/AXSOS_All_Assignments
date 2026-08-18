@@ -4,7 +4,8 @@ from django.http import JsonResponse
 
 # Create your views here.
 def root(request):
-    return redirect('/blogs')
+    # return redirect('/blogs')
+    return render(request, 'index.html')
 
 def index(request):
     return HttpResponse('Will be replaced with a list of blogs')
