@@ -11,6 +11,11 @@ def result(request):
         language = request.POST.get('language')
         comment = request.POST.get('comment')
 
+        request.session['name'] = name
+        request.session['location'] = location
+        request.session['language'] = language
+        request.session['comment'] = comment
+
         context = {
             'name': name,
             'location': location,
