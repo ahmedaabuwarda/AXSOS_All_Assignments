@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    />
+    <title>Greate Number Game</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Greate Number Game</h1>
+      <p>I am thinking of a number between 1 and 100</p>
+      <p>Take a guess!</p>
+      <!-- result -->
+      {% if message %}
+      <div class="result" style="background-color:{{ bg_color }};">
+        <p>{{ message }}</p>
+        {% if bg_color == "green" %}
+        <button
+          type="button"
+          onclick="window.location.href='{% url 'play_again' %}'"
+        >
+          Play Again
+        </button>
+        {% endif %}
+      </div>
+      {% endif %} {% if bg_color != "green" %}
+      <form method="post" action="/guess">
+        {% csrf_token %}
+        <input type="number" name="guessed_number" min="1" max="100" required />
+        <button type="submit">Submit</button>
+      </form>
+      {% endif %}
+    </div>
+  </body>
+</html>

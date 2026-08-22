@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.result {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px #000;
+}
+
+.container input {
+  padding: 10px;
+  border: 1px solid #000;
+  outline: none;
+}
