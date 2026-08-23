@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Ninja Gold</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gold-display">
+        <h2>Your Gold:</h2>
+        <h2 id="gold-amount">{{ request.session.gold }}</h2>
+        {% if request.session.winner == True %}
+        <h2 style="color: green">Yay You win!</h2>
+        <a href="/destroy_session" class="form-button">Paly again!</a>
+        {% elif request.session.winner == False %}
+        <h2 style="color: red">Oops! You lost!</h2>
+        <a href="/destroy_session" class="form-button">Paly again!</a>
+        {% endif %}
+      </div>
+
+      <div class="actions">
+        <form class="action" method="POST" action="/process_money">
+          <h2>Farm</h2>
+          <p>(earns 10-20 golds)</p>
+          {% csrf_token %}
+          <input type="hidden" name="action" value="farm" />
+          <button type="submit" class="form-button">Find Gold!</button>
+        </form>
+
+        <form class="action" method="POST" action="/process_money">
+          <h2>Cave</h2>
+          <p>(earns 10-20 golds)</p>
+          {% csrf_token %}
+          <input type="hidden" name="action" value="cave" />
+          <button type="submit" class="form-button">Find Gold!</button>
+        </form>
+
+        <form class="action" method="POST" action="/process_money">
+          <h2>House</h2>
+          <p>(earns 10-20 golds)</p>
+          {% csrf_token %}
+          <input type="hidden" name="action" value="house" />
+          <button type="submit" class="form-button">Find Gold!</button>
+        </form>
+
+        <form class="action" method="POST" action="/process_money">
+          <h2>Quest!</h2>
+          <p>(earns/takes 0-50 golds)</p>
+          {% csrf_token %}
+          <input type="hidden" name="action" value="quest" />
+          <button type="submit" class="form-button">Find Gold!</button>
+        </form>
+      </div>
+
+      <div class="activities">
+        <h2>Activities:</h2>
+        <ul id="activity-log">
+          {% for activity in request.session.activities %}
+          <li style="color: {{activity.color}}">{{ activity.data }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
