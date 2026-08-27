@@ -1,0 +1,16 @@
+users.objects.create(first_name="Lovegood1", last_name="Ravenclaw1", email_address="one@g.com", age=18, created_at="2026-08-01", updated_at="2026-08-01")
+users.objects.create(first_name="Lovegood2", last_name="Ravenclaw2", email_address="tow@g.com", age=17, created_at="2026-04-01", updated_at="2026-04-01")
+users.objects.create(first_name="Lovegood3", last_name="Ravenclaw3", email_address="three@g.com", age=16, created_at="2026-06-01", updated_at="2026-06-01")
+
+users.objects.all().__dict__
+
+users.objects.all().first()
+users.objects.all().last()
+
+user = users.objects.get(id=3)
+user.last_name = "Pancakes"
+
+user = users.objects.get(id=2)
+user.delete()
+users.objects.all().order_by("first_name")
+users.objects.all().order_by("-first_name")
