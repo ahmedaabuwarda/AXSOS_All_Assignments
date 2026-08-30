@@ -1,0 +1,35 @@
+Dojo.objects.create(name="Gol",city="Gana",state="Fire")
+Dojo.objects.create(name="Arbeela",city="Sweese",state="Blas")
+Dojo.objects.create(name="Khanwen",city="Flora",state="Bingo")
+
+dojo = Dojo.objects.get(id=1)
+dojo.delete()
+dojo = Dojo.objects.get(id=2)
+dojo.delete()
+dojo = Dojo.objects.get(id=3)
+dojo.delete()
+
+Dojo.objects.create(name="Aol",city="Mera",state="Glass")
+Dojo.objects.create(name="Grbeela",city="Ghana",state="Wezo")
+Dojo.objects.create(name="Rahanwen",city="Glora",state="Mingo")
+
+this_dojo = Dojo.objects.first()
+Ninja.objects.create(first_name="Lofy", last_name="Monkey", dojo=this_dojo)
+Ninja.objects.create(first_name="Lofy2", last_name="Monkey2", dojo=this_dojo)
+Ninja.objects.create(first_name="Lofy3", last_name="Monkey3", dojo=this_dojo)
+
+this_dojo = Dojo.objects.get(id=5)
+Ninja.objects.create(first_name="Shanks", last_name="Doflamingo", dojo=this_dojo)
+Ninja.objects.create(first_name="Shanks2", last_name="Doflamingo2", dojo=this_dojo)
+Ninja.objects.create(first_name="Shanks3", last_name="Doflamingo3", dojo=this_dojo)
+
+this_dojo = Dojo.objects.last()
+Ninja.objects.create(first_name="Ghoul", last_name="Kaido", dojo=this_dojo)
+Ninja.objects.create(first_name="Ghoul2", last_name="Kaido2", dojo=this_dojo)
+Ninja.objects.create(first_name="Ghoul3", last_name="Kaido3", dojo=this_dojo)
+
+ninja = Ninja.objects.filter(dojo=Dojo.objects.get(id=4))
+ninja = Ninja.objects.filter(dojo=Dojo.objects.get(id=5))
+ninja = Ninja.objects.filter(dojo=Dojo.objects.get(id=6))
+
+Dojo.objects.create(name="Kali linux",city="Binger",state="Finger",desc="not at all")
