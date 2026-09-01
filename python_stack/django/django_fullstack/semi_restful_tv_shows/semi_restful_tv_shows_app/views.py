@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Show
+from django.contrib import messages
 
 # Create your views here.
 def root(request):
@@ -11,10 +12,20 @@ def index(request):
     }
     return render(request,'shows/index.html', context)
 
-def new(request):
-    return render(request,'shows/new.html')
+def create(request):
+    return render(request,'shows/create.html')
 
 def store(request):
+
+    #validation before storing the data
+    errors = Show.objects.basic_validator(request.POST)
+
+    if (len(errors) > 0):
+        for key, val in errors.items():
+            messages.error(request, val)
+
+        return redirect(f'/shows/create')
+
     title = request.POST['title']
     network = request.POST['network']
     release_date = request.POST['release_date']
@@ -31,7 +42,15 @@ def edit(request, id):
     return render(request,'shows/edit.html', context)
 
 def update(request):
+    errors = Show.objects.basic_validator(request.POST)
     show_id = request.POST['show_id']
+
+    if (len(errors) > 0):
+        for key, val in errors.items():
+            messages.error(request, val)
+
+        return redirect(f'/shows/{show_id}/edit')
+
     show = Show.objects.get(id=show_id)
 
     show.title = request.POST['title']
