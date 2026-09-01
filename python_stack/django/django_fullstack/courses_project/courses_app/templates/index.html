@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>All the coueses</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Add new course</h2>
+      {% if messages %} {% for message in messages %}
+      <p class="errors">{{message}}</p>
+      {% endfor %} {% endif %}
+      <form action="{% url 'courses.store' %}" method="POST">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <label for="desc">Description</label>
+        <textarea name="desc" id="desc" rows="5"></textarea>
+        <button type="submit" class="btn">Add</button>
+      </form>
+      <table class="data-table">
+        <thead>
+          <th>ID</th>
+          <th>Course Name</th>
+          <th>Description</th>
+          <th>Date Added</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+          {% for course in courses %}
+          <tr>
+            <td>{{course.id}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.description.desc}}</td>
+            <td>{{course.created_at}}</td>
+            <td><a href="{% url 'courses.delete' course.id %}">remove</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

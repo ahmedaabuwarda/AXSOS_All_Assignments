@@ -1,0 +1,124 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.container > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container > form .div1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.container > form .div2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 15px;
+}
+
+.container > form .div3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  background-color: #fff;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px 14px;
+  border: 1px solid #000;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #222;
+  color: #fff;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.data-table tbody tr:hover {
+  background-color: #ffe9a6;
+}
+
+.data-table a {
+  color: #000;
+}
+
+.data-table a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: red;
+}
+
+input {
+  height: 20px;
+  padding: 8px;
+}
+
+textarea {
+  padding: 8px;
+}
+
+.btn {
+  border: 1px solid #000;
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  box-shadow: 5px 5px 0px 0px #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.danger {
+  background-color: red;
+}
+
+.black {
+  background-color: #292929;
+  color: white;
+}
+
+a {
+  color: #000;
+}
+
+.errors {
+  color: red;
+}

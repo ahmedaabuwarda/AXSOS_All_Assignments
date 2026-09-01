@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Are you sure you want to delete the following course?</h1>
+      <table class="data-table">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>{{course.name}}</td>
+          </tr>
+          <tr>
+            <td>Description</td>
+            <td>{{course.description.desc}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <form action="{% url 'courses.destroy' %}" method="POST">
+        {% csrf_token %}
+        <input
+          type="hidden"
+          name="course_id"
+          id="course_id"
+          value="{{course.id}}"
+        />
+        <div>
+          <a class="btn black" href="{% url 'courses' %}">No</a>
+          <button class="btn danger" type="submit">
+            Yes! I want to delete this.
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
