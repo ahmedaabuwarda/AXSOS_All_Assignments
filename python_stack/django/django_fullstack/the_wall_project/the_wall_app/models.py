@@ -20,7 +20,9 @@ class UserManager(models.Manager):
         if len(postData['email']) < 5:
             errors["email.min"] = "Email should be at least 5 characters"
         if (postData['email'] and not re.match(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$', postData['email'])):
-            errors["email.email"] = "Invalid email address" 
+            errors["email.email"] = "Invalid email address"
+        if User.objects.filter(email=postData['email']).exists():
+            errors["email.unique"] = "Email already exists"
 
         if (postData['password'] == '' or postData['password'] == None):
             errors["password.required"] = "Password field is required!"
